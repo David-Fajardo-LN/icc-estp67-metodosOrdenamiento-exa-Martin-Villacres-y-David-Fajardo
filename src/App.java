@@ -1,38 +1,42 @@
+import controllers.BrandController;
 import models.Brand;
 import models.CarModel;
 import models.CarYear;
-import java.util.*;
-
-import controllers.BrandController;
 
 public class App {
-        public static void main(String[] args) throws Exception {
-                Scanner sc = new Scanner(System.in);
+        public static void main(String[] args) {
+
                 BrandController controller = new BrandController();
 
-                System.out.println("Examen interciclo de Estructuras de Datos");
-                System.out.println("====Configurar studente.env====");
-
                 System.out.println("---- ARREGLO ORIGINAL -----");
-
                 Brand[] brands = createBrands();
                 for (Brand brand : brands) {
                         System.out.println(brand);
                 }
 
-                System.out.println("INGRESE EL AÑiO VALIDO A BUSCAR: ");
-                System.out.print("Anio: ");
-                int yearFind = sc.nextInt();
-                sc.nextLine();
-
+   
                 controller.sortBubbleDesc(brands);
-                Brand brandFind = controller.binarySearchByValidYears(brands, yearFind, false);
+                System.out.println("\n---- ARREGLO ORDENADO -----");
+                for (Brand brand : brands) {
+                        System.out.println(brand);
+                }
 
-                if (brandFind != null) {
-                        System.out.println("ANIO ENCONTRADO, INFORMACION: ");
-                        System.out.println(brandFind);
+
+                System.out.println("\nBUSCANDO MARCA CON 7 AÑOS VALIDOS:");
+                Brand found1 = controller.binarySearchByValidYears(brands,7,false);
+                if (found1 != null) {
+                        System.out.println(found1);
                 } else {
-                        System.out.println("ANIO NO ENCONTRADO");
+                        System.out.println("No encontrada");
+                }
+
+                System.out.println("\nBUSCANDO MARCA CON 4 AÑOS VALIDOS:");
+
+                Brand found2 =controller.binarySearchByValidYears(brands,4,false);
+                if (found2 != null) {
+                        System.out.println(found2);
+                } else {
+                        System.out.println("No encontrada");
                 }
         }
 

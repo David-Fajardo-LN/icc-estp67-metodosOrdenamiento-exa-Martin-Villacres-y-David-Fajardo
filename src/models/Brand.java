@@ -1,7 +1,5 @@
 package models;
 
-import java.util.Arrays;
-
 public class Brand {
   private String brandName;
   private CarModel[] carModels;
@@ -24,7 +22,7 @@ public class Brand {
 
   @Override
   public String toString() {
-    return "Brand [brandName=" + brandName + ", carModels=" + Arrays.toString(carModels) + "]";
+    return brandName + " - Años válidos: " + getTotalValidYears();
   }
 
   public int getTotalValidYears() {

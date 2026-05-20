@@ -1,5 +1,7 @@
 package models;
 
+import java.util.Arrays;
+
 public class CarModel {
   private String name;
   private CarYear[] carYears;
@@ -19,5 +21,12 @@ public class CarModel {
   public void setCarYears(CarYear[] carYears) {
     this.carYears = carYears;
   }
+
+  @Override
+  public String toString() {
+    return "CarModel [name=" + name + ", carYears=" + Arrays.toString(carYears) + "]";
+  }
+
+  
 
 }
