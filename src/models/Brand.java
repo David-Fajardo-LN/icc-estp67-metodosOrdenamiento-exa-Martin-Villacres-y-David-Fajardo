@@ -12,12 +12,20 @@ public class Brand {
     this.carModels = carModels;
   }
 
+  public String getBrandName() {
+        return brandName;
+    }
+
+  public void setBrandName(String brandName) {
+      this.brandName = brandName;
+  }
+
   public CarModel[] getCarModels() {
-    return carModels;
+      return carModels;
   }
 
   public void setCarModels(CarModel[] carModels) {
-    this.carModels = carModels;
+      this.carModels = carModels;
   }
 
   @Override
@@ -36,5 +44,4 @@ public class Brand {
     }
     return validYears;
   }
-
 }
