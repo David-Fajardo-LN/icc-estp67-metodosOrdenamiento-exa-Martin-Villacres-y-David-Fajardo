@@ -1,12 +1,39 @@
 import models.Brand;
 import models.CarModel;
 import models.CarYear;
+import java.util.*;
+
+import controllers.BrandController;
 
 public class App {
         public static void main(String[] args) throws Exception {
+                Scanner sc = new Scanner(System.in);
+                BrandController controller = new BrandController();
+
                 System.out.println("Examen interciclo de Estructuras de Datos");
                 System.out.println("====Configurar studente.env====");
 
+                System.out.println("---- ARREGLO ORIGINAL -----");
+
+                Brand[] brands = createBrands();
+                for (Brand brand : brands) {
+                        System.out.println(brand);
+                }
+
+                System.out.println("INGRESE EL AÑiO VALIDO A BUSCAR: ");
+                System.out.print("Anio: ");
+                int yearFind = sc.nextInt();
+                sc.nextLine();
+
+                controller.sortBubbleDesc(brands);
+                Brand brandFind = controller.binarySearchByValidYears(brands, yearFind, false);
+
+                if (brandFind != null) {
+                        System.out.println("ANIO ENCONTRADO, INFORMACION: ");
+                        System.out.println(brandFind);
+                } else {
+                        System.out.println("ANIO NO ENCONTRADO");
+                }
         }
 
         /**
