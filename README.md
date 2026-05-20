@@ -188,7 +188,29 @@ No encontrada
 **INSTRUCCIONES**: Ejecute `App.java` y copie TODA la salida de consola aquí (Ctrl+C / Ctrl+V):
 
 ```
-[COPIE AQUÍ LA SALIDA COMPLETA DE LA CONSOLA]
+---- ARREGLO ORIGINAL -----
+Honda - Años válidos: 6
+Toyota - Años válidos: 10
+Ford - Años válidos: 5
+Chevrolet - Años válidos: 8
+Nissan - Años válidos: 7
+Mazda - Años válidos: 12
+Hyundai - Años válidos: 8
+
+---- ARREGLO ORDENADO -----
+Mazda - Años válidos: 12
+Toyota - Años válidos: 10
+Chevrolet - Años válidos: 8
+Hyundai - Años válidos: 8
+Nissan - Años válidos: 7
+Honda - Años válidos: 6
+Ford - Años válidos: 5
+
+BUSCANDO MARCA CON 7 AÑOS VALIDOS:
+Nissan - Años válidos: 7
+
+BUSCANDO MARCA CON 4 AÑOS VALIDOS:
+No encontrada
 ```
 
 ---
